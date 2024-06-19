@@ -1,0 +1,10 @@
+version: "3.0"
+
+services:
+  fastapi_web:
+    image: playlinter
+    tty: true
+    working_dir: /root/src
+    volumes:
+      - ./:/root/src
+    command: bash
