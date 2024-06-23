@@ -1,20 +1,18 @@
 # lint
 ## Include What You Use
 
-Command
 ```
-iwyu main.cpp
-```
+# iwyu main.cpp
 
-Output
-```
 main.cpp should add these lines:
-#include <vector>  // for vector
+#include <string>       // for basic_string, allocator, operator<<, string
+#include <vector>       // for vector
 
 main.cpp should remove these lines:
-- #include "lib.hpp"  // lines 1-1
 
 The full include-list for main.cpp:
-#include <vector>  // for vector
----
+#include <iostream>     // for char_traits, basic_ostream, cout, endl
+#include <string>       // for basic_string, allocator, operator<<, string
+#include <vector>       // for vector
+#include "utility.hpp"  // for basename
 ```
